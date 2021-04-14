@@ -18,11 +18,8 @@ namespace xadrez_console
                     try
                     {
                         Console.Clear();
-                        Tela.imprimirTabuleiro(partida.tab);
-                        Console.WriteLine();
-                        Console.WriteLine("--------------------------------------");
-                        Console.WriteLine("Turno: " + partida.turno);
-                        Console.WriteLine("Jogador atual: " + partida.jogadorAtual);
+                        Tela.imprimirPartida(partida);
+                        
                         Console.WriteLine("--------------------------------------");
                         Console.Write("Origem: ");
                         Posicao origem = Tela.lerPosicaoXadrez().toPosicao();
@@ -48,7 +45,7 @@ namespace xadrez_console
                     }
                     catch (FormatException)
                     {
-                        Console.WriteLine("Como jogar, exemplo: a1");
+                        Console.WriteLine("Como jogar, exemplo: \nOrigem: a1 \nDestino: a5");
                         Console.ReadLine();
                     }
                     catch (IndexOutOfRangeException)
