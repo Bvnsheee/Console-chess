@@ -2,19 +2,14 @@
 using tabuleiro;
 using xadrez;
 
-namespace xadrez_console
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace xadrez_console {
+    class Program {
+        static void Main(string[] args) {
 
-            try
-            {
+            try {
                 PartidaDeXadrez partida = new PartidaDeXadrez();
 
-                while (!partida.terminada)
-                {
+                while (!partida.terminada) {
 
                     Console.Clear();
                     Tela.imprimirTabuleiro(partida.tab);
@@ -29,8 +24,7 @@ namespace xadrez_console
                 }
 
             }
-            catch (TabuleiroException e)
-            {
+            catch (TabuleiroException e) {
                 Console.WriteLine(e.Message);
             }
 
